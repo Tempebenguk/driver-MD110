@@ -1,0 +1,78 @@
+*PPD-Adobe: "4.3"
+*%%%% PPD file for Blueprint BP-TD110 with CUPS (ARM Compatible).
+*%%%% Adapted from HPRT SL42 template for Blueprint BP-TD110.
+*FormatVersion: "4.3"
+*FileVersion: "1.0.0"
+*LanguageVersion: English
+*LanguageEncoding: ISOLatin1
+*PCFileName: "blueprint-bp-td110.ppd"
+*Product: "(BP-TD110)"
+*Manufacturer: "Blueprint"
+*ModelName: "BP-TD110"
+*ShortNickName: "BP-TD110"
+*NickName: "Blueprint BP-TD110 TSPL (ARM)"
+*PSVersion: "(3010.000) 0"
+*LanguageLevel: "3"
+*ColorDevice: False
+*DefaultColorSpace: Gray
+*FileSystem: False
+*Throughput: "1"
+*LandscapeOrientation: Plus90
+*TTRasterizer: Type42
+*cupsVersion: 1.5
+*cupsModelNumber: 20
+*cupsManualCopies: False
+*cupsFilter: "application/vnd.cups-raster 0 raster-tspl"
+*cupsLanguages: "en"
+
+*MaxMediaWidth: "306.14"
+*MaxMediaHeight: "6480"
+*HWMargins: 0.00 0.00 0.00 0.00
+*CustomPageSize True: "pop pop pop <</PageSize[5 -2 roll]/ImagingBBox null>>setpagedevice"
+*ParamCustomPageSize Width: 1 points 14.17 306.14
+*ParamCustomPageSize Height: 2 points 14.17 6480
+*ParamCustomPageSize WidthOffset: 3 points 0 0
+*ParamCustomPageSize HeightOffset: 4 points 0 0
+*ParamCustomPageSize Orientation: 5 int 0 0
+*RequiresPageRegion All: True
+
+*OpenGroup: General/General
+*OpenUI *PageSize/Media Size: PickOne
+*OrderDependency: 10 AnySetup *PageSize
+*DefaultPageSize: w100h150
+*PageSize w100h150/4"x6"(101.6mm x 152.4mm): "<</PageSize[283 425]/ImagingBBox null>>setpagedevice"
+*PageSize w100h100/4"x4"(101.6mm x 101.6mm): "<</PageSize[283 283]/ImagingBBox null>>setpagedevice"
+*PageSize w76h100/3"x4"(76.2mm x 101.6mm): "<</PageSize[216 283]/ImagingBBox null>>setpagedevice"
+*PageSize w50h75/2"x3"(50.8mm x 76.2mm): "<</PageSize[144 213]/ImagingBBox null>>setpagedevice"
+*CloseUI: *PageSize
+
+*OpenGroup: Quality/Quality
+*OpenUI *Resolution/Resolution: PickOne
+*OrderDependency: 10 AnySetup *Resolution
+*DefaultResolution: 203dpi
+*Resolution 203dpi/203 DPI: "<</HWResolution[203 203]/cupsBitsPerColor 1/cupsRowCount 0/cupsRowFeed 0/cupsRowStep 0/cupsColorSpace 3>>setpagedevice"
+*CloseUI: *Resolution
+*CloseGroup: Quality
+
+*OpenGroup: PrinterOptions/Printer Options
+*OpenUI *PrintSpeed/Print Speed: PickOne
+*OrderDependency: 310 AnySetup *PrintSpeed
+*DefaultPrintSpeed: None
+*PrintSpeed None/Default: ""
+*PrintSpeed 2/2.00 in/sec: ""
+*PrintSpeed 3/3.00 in/sec: ""
+*PrintSpeed 4/4.00 in/sec: ""
+*CloseUI: *PrintSpeed
+
+*OpenUI *PrintDarkness/Print Darkness: PickOne
+*OrderDependency: 320 AnySetup *PrintDarkness
+*DefaultPrintDarkness: None
+*PrintDarkness None/Default: ""
+*PrintDarkness 0/0: ""
+*PrintDarkness 5/5: ""
+*PrintDarkness 10/10: ""
+*PrintDarkness 15/15: ""
+*CloseUI: *PrintDarkness
+*CloseGroup: PrinterOptions
+
+*DefaultFont: Courier

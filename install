@@ -14,11 +14,11 @@ fi
 
 TARGET_CPU=`uname -m`
 
-echo "hprt n43bt label printer"
+echo "hprt / blueprint label printer"
 echo "installer"
 echo "---------------------------------------"
 echo ""
-echo "Models :hprt n43bt label printer"
+echo "Models :hprt n43bt / blueprint bp-td110 label printer"
 echo ""
 
 if [ ! -z $DESTDIR ]
@@ -79,15 +79,24 @@ INSTALL=/usr/bin/install
 
 echo "Install raster filter ..."
 
-
-$INSTALL filter/x86/raster-tspl $FILTERDIR
-
 case $TARGET_CPU in 
 	x86_64)
 		$INSTALL filter/x64/raster-tspl $FILTERDIR
 	;;
+	aarch64)
+		$INSTALL filter/aarch64/raster-tspl $FILTERDIR
+	;;
+	armv7l|armv6l|armhf)
+		$INSTALL filter/armv7/raster-tspl $FILTERDIR
+	;;
+	i386|i486|i586|i686)
+		$INSTALL filter/x86/raster-tspl $FILTERDIR
+	;;
+	*)
+		echo "Unknown architecture $TARGET_CPU, defaulting to x86"
+		$INSTALL filter/x86/raster-tspl $FILTERDIR
+	;;
 esac
-
 
 echo "Install raster filter SUCCESS..."
 
